@@ -107,3 +107,18 @@ sudo systemctl enable pritunl
 ## License
 
 Please refer to the [`LICENSE`](LICENSE) file for a copy of the license.
+
+## Running with docker-compose (local testing)
+
+This will build pritunl in the container based on the local copy of code in this repository. If you're just wanting to get Pritunl up locally using a pre-built image, you can use this repo:
+https://github.com/goofball222/pritunl
+
+```sh
+docker-compose up --build
+```
+
+Once Pritunl has come up, in a separate terminal you can use this command to get the default password, and then login at https://localhost:
+
+```sh
+docker-compose exec pritunl pritunl default-password
+```
